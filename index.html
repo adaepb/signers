@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação DeMolay Alumni Paraíba - Em Construção</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #222, #444);
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+        }
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #333;
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 400px;
+            height: 20px;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #ffc107;
+            animation: load 5s infinite;
+        }
+        .social-icons a {
+            color: #ffc107;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes load {
+            0% { width: 0; }
+            50% { width: 80%; }
+            100% { width: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Associação DeMolay Alumni Paraíba</h1>
+        <p class="subtitle">Nosso site está em construção. Em breve traremos novidades!</p>
+        
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <p>Acompanhe nossas redes sociais para ficar por dentro das novidades:</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/AssociaçãoDeMolayAlumniPB" target="_blank">📘</a>
+            <a href="https://instagram.com/AssociaçãoDeMolayAlumniPB" target="_blank">📸</a>
+            <a href="https://twitter.com/AssociaçãoDeMolayAlumniPB" target="_blank">🐦</a>
+        </div>
+    </div>
+
+    <script>
+        // Animação para exibir "progresso" no carregamento do site
+        document.addEventListener("DOMContentLoaded", function() {
+            const progress = document.querySelector('.progress');
+            let width = 0;
+            setInterval(() => {
+                if (width >= 100) width = 0;
+                width++;
+                progress.style.width = width + '%';
+            }, 50);
+        });
+    </script>
+</body>
+</html>
